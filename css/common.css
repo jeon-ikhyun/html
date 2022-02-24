@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 1920px;
+}
+
+nav {
+	display: flex;
+}
+
+#mainMenu {
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#mainMenu li {
+	text-align: center;
+	float: left;
+	margin: 15px 150px;
+}
+
+#mainMenu li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
