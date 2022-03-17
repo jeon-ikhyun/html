@@ -1,90 +1,131 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root {
+	--clr: #222327;
 }
 
 body {
-	width: 1920px;
-}
-
-nav {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 17vh;
+	background: var(--clr);
 }
 
-#mainMenu {
-	list-style-type: none;
-	overflow: hidden;
-	margin: 0 auto;
+.navigation {
+	width: 700px;
+	height: 70px;
+	background: #fff;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
 }
 
-#mainMenu li {
-	text-align: center;
-	float: left;
-	margin: 15px 150px;
+.navigation ul {
+	display: flex;
+	width: 700px;
 }
 
-#mainMenu li a {
-	text-decoration: none;
-	color: #333;
-	font-weight: bold;
+.navigation ul li {
+	position: relative;
+	list-style: none;
+	width: 100px;
+	height: 70px;
+	margin-left: 100px;
+	z-index: 1;
 }
 
-#content1 {
-
-}
-
-#boardDiv {
-	width : 1024px;
-	margin : 0 auto;
-	padding : 30px 0;
-}
-
-#boardTable {
+.navigation ul li a {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	width: 100%;
-	font-family: -apple-system,BlinkMacSystemFont,malgun gothic,¸¼Àº °íµñ,helvetica,apple sd gothic neo,sans-serif;
+	text-align: center;
+	font-weight: 500;
 }
 
-#boardTable thead tr {
-	font-size : 12px;
-	font-weight : 400;
-	color : #375472;
-	text-shadow : none;
-	letter-spacing : -1px;
+.navigation ul li a .icon {
+	position: relative;
+	display: block;
+	line-height: 75px;
+	font-size: 1.5em;
+	text-align: center;
+	transition: 0.25s;
+	color: var(--clr);
 }
 
-#boardTable tr {
-	font-size: 12px;
+.navigation ul li.active a .icon {
+	transform: translateY(-35px);
+}
+
+.navigation ul li a .text {
+	position: absolute;
+	color: var(--clr);
 	font-weight: 400;
-	color: #375472;
-	text-shadow: none;
-	letter-spacing: -1px;
+	font-size: 0.75em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
 }
 
-#boardTable tr th,
-#boardTable tr td {
-	padding : 8px 10px;
-	border-bottom : 1px solid #eee;
+.navigation ul li.active a .text {
+	opacity: 1;
+	transform: translateY(10px);
 }
 
-.no, .category, .date, .views {
-	text-align : center;
-}
-.title {
-	width : 70%;
-	text-align : left;
-}
-
-.notice {
-	background-color : #f9f9f9;
-	border-color : #ddd;
-}
-
-.write {
-	text-align : right;
-	margin-top : 10px;
-	margin-right : 5px;
+.indicator {
+	position: absolute;
+	top: -37px;
+	left: 115px;
+	width: 70px;
+	height: 70px;
+	background: #29fd53;
+	border-radius: 50%;
+	border: 6px solid var(--clr);
+	transition: 0.5s;
 }
 
-.search {
-	text-align : center;
+.indicator::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -22px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-right-radius: 20px;
+	box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -22px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-left-radius: 20px;
+	box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+	transform: translateX(calc(200px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+	transform: translateX(calc(200px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+	transform: translateX(calc(200px * 2));
 }

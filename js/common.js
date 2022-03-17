@@ -1,16 +1,7 @@
-$(window).load(function () {
-    $("content").each(function (index, item) {
-        $(this).hide();
-    });
-    clickMenu(0);
-});
-
-function clickMenu(idx) {
-    $("content").each(function (index, item) {
-        if (index == idx) {
-            $(this).show();
-        } else {
-            $(this).hide();
-        }
-    });
+const list = document.querySelectorAll('.list');
+function activeLink() {
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
 }
+list.forEach((item) => item.addEventListener('click', activeLink));

@@ -1,123 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>S3 Test Web Server</title>
-	<meta charset="utf-8" />
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<script type="text/javascript" src="js/common.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>IKJA's Web Site</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-	<header>
-		<img src="https://placehold.jp/1920x30.png?text=banner" />
-	</header>
-	<nav>
-		<ul id="mainMenu">
-			<li>
-				<a href="#" onclick="clickMenu('0')">menu1</a>
+	<div class="navigation">
+		<ul>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="book-outline"></ion-icon>
+					</span>
+					<span class="text">Illustrated Book</span>
+				</a>
 			</li>
-			<li>
-				<a href="#" onclick="clickMenu('1')">menu2</a>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="card-outline"></ion-icon>
+					</span>
+					<span class="text">Information</span>
+				</a>
 			</li>
-			<li>
-				<a href="#" onclick="clickMenu('2')">menu3</a>
+			<li class="list">
+				<a href="#">
+					<span class="icon">
+						<ion-icon name="list-outline"></ion-icon>
+					</span>
+					<span class="text">Notice Board</span>
+				</a>
 			</li>
-			<li>
-				<a href="#" onclick="clickMenu('3')">menu4</a>
-			</li>
-			<li>
-				<a href="#" onclick="clickMenu('4')">menu5</a>
-			</li>
+			<div class="indicator"></div>
 		</ul>
-	</nav>
-	<article>
-		<content id="content1">
-			<div id="boardDiv">
-				<table id="boardTable" border="0" cellpadding="0" cellspacing="0">
-					<thead>
-						<tr>
-							<th class="no">
-								<span>번호</span>
-							</th>
-							<th class="category">
-								<span>카테고리</span>
-							</th>
-							<th class="title">
-								<span>제목</span>
-							</th>
-							<th class="">
-								<span>날짜</span>
-							</th>
-							<th class="views">
-								<span>조회</span>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 공지사항 -->
-						<tr class="notice">
-							<td class="no">
-								<span>공지</span>
-							</td>
-							<td class="category">
-								<span>알림</span>
-							</td>
-							<td class="title">
-								<span>테스트</span>
-							</td>
-							<td class="date">
-								<span>22.03.03</span>
-							</td>
-							<td class="views">
-								<span>9</span>
-							</td>
-						</tr>
-						<!-- 내용 -->
-						<tr>
-							<td class="no">
-								<span>1</span>
-							</td>
-							<td class="category">
-								<span>2</span>
-							</td>
-							<td class="title">
-								<span>3</span>
-							</td>
-							<td class="date">
-								<span>4</span>
-							</td>
-							<td class="views">
-								<span>5</span>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="write">
-					<button onclick="write()">글쓰기</button>
-				</div>
-				<div class="search">
-					<span>카테고리</span>
-					<span>검색어</span>
-					<button onclick="search()">검색</button>
-				</div>
-			</div>
-		</content>
-		<content id="content2">
-			<img src="https://placehold.jp/1920x720.png?text=content2" />
-		</content>
-		<content id="content3">
-			<img src="https://placehold.jp/1920x720.png?text=content3" />
-		</content>
-		<content id="content4">
-			<img src="https://placehold.jp/1920x720.png?text=content4" />
-		</content>
-		<content id="content5">
-			<img src="https://placehold.jp/1920x720.png?text=content5" />
-		</content>
-	</article>
-	<footer>
-		<img src="https://placehold.jp/1920x30.png?text=footer" />
-	</footer>
+	</div>
+	<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
