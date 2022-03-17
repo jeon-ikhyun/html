@@ -28,3 +28,63 @@ nav {
 	color: #333;
 	font-weight: bold;
 }
+
+#content1 {
+
+}
+
+#boardDiv {
+	width : 1024px;
+	margin : 0 auto;
+	padding : 30px 0;
+}
+
+#boardTable {
+	width: 100%;
+	font-family: -apple-system,BlinkMacSystemFont,malgun gothic,¸¼Àº °íµñ,helvetica,apple sd gothic neo,sans-serif;
+}
+
+#boardTable thead tr {
+	font-size : 12px;
+	font-weight : 400;
+	color : #375472;
+	text-shadow : none;
+	letter-spacing : -1px;
+}
+
+#boardTable tr {
+	font-size: 12px;
+	font-weight: 400;
+	color: #375472;
+	text-shadow: none;
+	letter-spacing: -1px;
+}
+
+#boardTable tr th,
+#boardTable tr td {
+	padding : 8px 10px;
+	border-bottom : 1px solid #eee;
+}
+
+.no, .category, .date, .views {
+	text-align : center;
+}
+.title {
+	width : 70%;
+	text-align : left;
+}
+
+.notice {
+	background-color : #f9f9f9;
+	border-color : #ddd;
+}
+
+.write {
+	text-align : right;
+	margin-top : 10px;
+	margin-right : 5px;
+}
+
+.search {
+	text-align : center;
+}

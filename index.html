@@ -6,6 +6,7 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<script type="text/javascript" src="js/common.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 	<header>
@@ -32,26 +33,78 @@
 	</nav>
 	<article>
 		<content id="content1">
-			<style>
-				.embed-container {
-					position: relative;
-					padding-bottom: 56.25%;
-					height: 0;
-					overflow: hidden;
-					max-width: 100%;
-				}
-
-					.embed-container iframe, .embed-container object, .embed-container embed {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-					}
-			</style>
-			<div class='embed-container'><iframe src='https://www.youtube.com/embed/undefined' frameborder='0' allowfullscreen></iframe></div>
+			<div id="boardDiv">
+				<table id="boardTable" border="0" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th class="no">
+								<span>번호</span>
+							</th>
+							<th class="category">
+								<span>카테고리</span>
+							</th>
+							<th class="title">
+								<span>제목</span>
+							</th>
+							<th class="">
+								<span>날짜</span>
+							</th>
+							<th class="views">
+								<span>조회</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 공지사항 -->
+						<tr class="notice">
+							<td class="no">
+								<span>공지</span>
+							</td>
+							<td class="category">
+								<span>알림</span>
+							</td>
+							<td class="title">
+								<span>테스트</span>
+							</td>
+							<td class="date">
+								<span>22.03.03</span>
+							</td>
+							<td class="views">
+								<span>9</span>
+							</td>
+						</tr>
+						<!-- 내용 -->
+						<tr>
+							<td class="no">
+								<span>1</span>
+							</td>
+							<td class="category">
+								<span>2</span>
+							</td>
+							<td class="title">
+								<span>3</span>
+							</td>
+							<td class="date">
+								<span>4</span>
+							</td>
+							<td class="views">
+								<span>5</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="write">
+					<button onclick="write()">글쓰기</button>
+				</div>
+				<div class="search">
+					<span>카테고리</span>
+					<span>검색어</span>
+					<button onclick="search()">검색</button>
+				</div>
+			</div>
 		</content>
 		<content id="content2">
+			<img src="https://placehold.jp/1920x720.png?text=content2" />
 		</content>
 		<content id="content3">
 			<img src="https://placehold.jp/1920x720.png?text=content3" />
